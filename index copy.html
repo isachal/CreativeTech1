@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photon connect</title>
+</head>
+<body>
+<script src ="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"> </script>
+<script>
+    
+    let urlKate = "https://api.particle.io/v1/devices/3b0034000147393033373334/therm_value?access_token=0725e4850e09dcd77263fb4eb3b2f83847384c81";
+    let urlChristie = "https://api.particle.io/v1/devices/2b0023001847393035313138/light_value?access_token=9bd94f45243608f78087ed47c3be88bb1a7ecade";
+    let urlIsa = "https://api.particle.io/v1/devices/22003e000c47373336323230/flex_value?access_token=f17379753860ed4bb7105effe51d71518d134e64";
+   
+    let dataIsa = "";
+    let dataChristie = "";
+    let dataKate = "";
+    let currentTime, prevTime;
+    let valueIsa = 20;
+    let valueKate = 1;
+    let valueChristie = 1;
+    
+    
+    function setup(){
+        createCanvas(600, 600);
+        console.log ("setup");
+    }
+
+    function draw(){
+        background(255, 204, 0);
+
+       currentTime = millis() % 5000;
+       if(currentTime < prevTime){
+            data = loadJSON(urlIsa, processDataIsa, handleError);
+            data = loadJSON(urlChristie, processDataChristie, handleError);
+            data = loadJSON(urlKate, processDataKate, handleError);
+
+          }
+
+       fill (255, 0, 0);
+       circle(width/2, height/2, valueIsa);
+       
+       fill (0, 255, 0);
+       circle(width/3, height/3, valueChristie);
+
+       fill (0, 0, 255);
+       circle(width/8, height/2, valueKate);
+       
+       prevTime = currentTime;
+        
+    }
+
+    function processDataIsa(dataIsa){
+        console.log (dataIsa.result);
+        valueIsa = map(parseInt(dataIsa.result), 300, 1500, 0, 200);
+        console.log("isa value: " + valueIsa);
+
+    }
+
+    function processDataChristie(dataIsa){
+        console.log (dataIsa.result);
+        valueChristie = map(parseInt(dataIsa.result), 0, 4096, 0, 200);
+        console.log("isa value: " + valueIsa);
+
+    }
+
+    function processDataKate(dataKate){
+        console.log (dataKate.result);
+        valueKate = map(parseInt(dataKate.result), 200, 1400, 0, 200);
+        console.log("kate value: " + valueKate);
+
+    }
+
+function handleError(error) {
+        console.log(error); 
+}
+
+</script>
+
+</body>
+</html>
