@@ -20,7 +20,7 @@
 
   <script>
       const cocktailButton = document.getElementById("fetchaCocktail");
-      const cocktailSection = document.getElementById("cocktailContainer")
+      const cocktailSection = document.getElementById("cocktailSection");
 
       cocktailButton.addEventListener("click", fetchCocktail);
 
@@ -34,18 +34,23 @@
 
 
         }).
-        then(data) => {
+        then((data) => {
             console.log("JSON data from DB:");
             console.log(data);
             displayCocktail(data);
 
 
-        }).catch(error) => {
+        }).catch((error) => {
             console.error(error);
         
-        } we );
+        });
 
         function displayCocktail(data){
+
+            while(cocktailSection.firstChild){
+
+            cocktailSection.removeChild(cocktailSection.firstChild);
+            }
          const drName = data.drinks[0].strDrink;  
          const drImage = data.drinks[0].strDrinkThumb;  
          const drInstr = data.drinks[0].strInstructions; 
@@ -55,7 +60,7 @@
 
          const drImg = document.createElement('img');
          drImg.src = drImage;
-         drImage.alt = drName;
+         drImg.alt = drName;
 
          const drPar = document.createElement('p');
          drPar.innerText = drInstr;
