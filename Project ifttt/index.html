@@ -8,10 +8,30 @@
 <body>
   <header>
      <button id='fetchNASApic'> Fetch an image from NASA</button>
-     <button id='fetchaCocktail'> Fetch an image from Cocktail</button>
+     <button id='fetchaCocktail'> Fetch an random cocktail</button>
   </header>  
   <main></main>
 
+  <!-- scripts -- >
+
+  <script>
+      const cocktailButton = document.getElementById("fetchaCocktail");
+
+      cocktailButton.addEventListener("click", fetchCocktail);
+
+      const randomCocktailURL = 'https://www.thecocktaildb.com/api/json/v1/1/random.php' ;
+      function fetchCocktail(){
+        fetch(randomCocktailURL). then(function (result)) {
+            console.log(result);
+            
+
+
+        }
+        
+
+      }
+
+  </script>
   <footer></footer>
 </body>
 </html>
