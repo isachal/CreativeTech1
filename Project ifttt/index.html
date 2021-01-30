@@ -10,12 +10,17 @@
      <button id='fetchNASApic'> Fetch an image from NASA</button>
      <button id='fetchaCocktail'> Fetch an random cocktail</button>
   </header>  
-  <main></main>
+  <main>
+ <section id="cocktailSection"></section>
+
+
+  </main>
 
   <!-- scripts -->
 
   <script>
       const cocktailButton = document.getElementById("fetchaCocktail");
+      const cocktailSection = document.getElementById("cocktailContainer")
 
       cocktailButton.addEventListener("click", fetchCocktail);
 
@@ -23,10 +28,44 @@
       function fetchCocktail(){
         fetch(randomCocktailURL). then(function (result) { 
             console.log(result);
+            return result.json();
+
             
 
 
-        })
+        }).
+        then(data) => {
+            console.log("JSON data from DB:");
+            console.log(data);
+
+
+        }).catch(error) => {
+            console.error(error);
+        
+        } we );
+
+        function displayCocktail(data){
+         const drName = data.drinks[0].strDrink;  
+         const drImage = data.drinks[0].strDrinkThumb;  
+         const drInstr = data.drinks[0].strInstructions; 
+
+         const drTitle = document.createElement('h2');
+         drTitle.innerText = drName;
+
+         const drImg = document.createElement('img');
+         drImg.src = drImage;
+         drImage.alt = drName;
+
+         const drPar = document.createElement('p');
+         drPar.innerText = drInstr;
+
+
+         cocktailSection.appendChild(drTitle);
+         cocktailSection.appendChild(drImg);
+         cocktailSection.appendChild(drPar);
+
+
+        }
         
 
       }
