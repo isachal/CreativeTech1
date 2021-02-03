@@ -28,7 +28,7 @@
 
       poemButton.addEventListener("click", fetchPoemline);
 
-      const randomPoemlineURL = 'https://poetrydb.org//author/Dickinson/title.json' ;
+      const randomPoemlineURL = 'https://poetrydb.org//lines/Latitudeless%20Place/title.json' ;
       function fetchPoemline(){
         fetch(randomPoemlineURL). then(function (result) { 
             console.log(result);
@@ -41,7 +41,7 @@
         then((data) => {
             console.log("JSON data from DB:");
             console.log(data);
-            displayCocktail(data);
+            displayPoem(data);
 
 
         }).catch((error) => {
@@ -49,32 +49,27 @@
         
         });
 
-        function displayCocktail(data){
+        function displayPoem(data){
         
 
-            while(cocktailSection.firstChild){
+            while(poemLine.firstChild){
 
-            cocktailSection.removeChild(cocktailSection.firstChild);
+            poemLine.removeChild(poemLine.firstChild);
             }
-         const drName = data.drinks[0].strDrink;  
-         const drImage = data.drinks[0].strDrinkThumb;  
-         const drInstr = data.drinks[0].strInstructions; 
+         const drTitle = data.drinks[0].strDrink;  
+         const drLine = data.drinks[0].strDrinkThumb;  
+    
 
          const drTitle = document.createElement('h2');
          drTitle.innerText = drName;
 
-         const drImg = document.createElement('img');
-         drImg.src = drImage;
-         drImg.alt = drName;
+         const drLine = document.createElement('p');
+        drLine.innerText = drText;
+         
 
-         const drPar = document.createElement('p');
-         drPar.innerText = drInstr;
-
-
-         cocktailSection.appendChild(drTitle);
-         cocktailSection.appendChild(drImg);
-         cocktailSection.appendChild(drPar);
-
+         poemLine.appendChild(drTitle);
+         poemLine.appendChild(drLine);
+   
 
         }
         
