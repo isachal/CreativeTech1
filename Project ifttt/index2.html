@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Poem Lines</title>
 </head>
 <body>
   <header>
-     <button id='fetchNASApic'> Fetch an image from NASA</button>
-     <button id='fetchaCocktail'> Fetch an random cocktail</button>
+     <button id='fetchPoemline'> Fetch an line from a poem</button>
+
   </header>  
   <main>
-<section id="NASAContainer"> </section>
- <section id="cocktailSection"></section>
+<section id="poemLine"> </section>
+ 
 
 
 
@@ -23,14 +23,14 @@
   <!-- scripts -->
 
   <script>
-      const cocktailButton = document.getElementById("fetchaCocktail");
-      const cocktailSection = document.getElementById("cocktailSection");
+      const poemButton = document.getElementById("fetchPoemline");
+      const poemLine = document.getElementById("poemLine");
 
-      cocktailButton.addEventListener("click", fetchCocktail);
+      poemButton.addEventListener("click", fetchPoemline);
 
-      const randomCocktailURL = 'https://www.thecocktaildb.com/api/json/v1/1/random.php' ;
-      function fetchCocktail(){
-        fetch(randomCocktailURL). then(function (result) { 
+      const randomPoemlineURL = 'https://poetrydb.org//author/Dickinson/title.json' ;
+      function fetchPoemline(){
+        fetch(randomPoemlineURL). then(function (result) { 
             console.log(result);
             return result.json();
 
