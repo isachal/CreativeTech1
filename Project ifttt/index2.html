@@ -28,7 +28,7 @@
 
       poemButton.addEventListener("click", fetchPoemline);
 
-      const randomPoemlineURL = 'https://poetrydb.org//lines/Latitudeless%20Place/title.json' ;
+      const randomPoemlineURL = 'https://poetrydb.org/lines/Latitudeless%20Place/lines.json ' ;
       function fetchPoemline(){
         fetch(randomPoemlineURL). then(function (result) { 
             console.log(result);
@@ -49,28 +49,24 @@
         
         });
 
-        function displayPoem(data){
-        
-
-            while(poemLine.firstChild){
-
-            poemLine.removeChild(poemLine.firstChild);
-            }
-         const drTitle = data.drinks[0].strDrink;  
-         const drLine = data.drinks[0].strDrinkThumb;  
-    
-
-         const drTitle = document.createElement('h2');
-         drTitle.innerText = drName;
-
-         const drLine = document.createElement('p');
-        drLine.innerText = drText;
-         
-
-         poemLine.appendChild(drTitle);
-         poemLine.appendChild(drLine);
-   
-
+        function fetchRandomLine() {
+            fetch('https://poetrydb.org/lines/Latitudeless%20Place/lines.json').
+            then((result) => {
+                console.log("Result from Poetry DB:")
+                console.log(result);
+                return result.json();
+            }).
+            then((data) => {
+                console.log("JSON data from Poetry DB:");
+                console.log(data);
+                let randomNumber = parseInt(Math.random() * data[0].lines.length);
+                let randomLine = data[0].lines[randomNumber];
+                let lineContainer = document.createElement('p');
+                lineContainer.innerText = randomLine;
+                documentSection.appendChild(lineContainer);
+            }).catch((error) => {
+                console.error(error);
+            });
         }
         
 
