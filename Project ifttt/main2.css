@@ -1,0 +1,26 @@
+main {
+    width : 700px;
+    margin-left: auto;
+    margin-right: auto;
+     
+ }
+ 
+ 
+ img{
+     max-width: 600px;
+     margin-bottom: 50px;
+ }
+ 
+ p{
+     font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ h1{
+     color: ivory;
+     margin-top: 150px;
+ }
+ 
+ body{
+     background-color: cyan
+ 
+ }
