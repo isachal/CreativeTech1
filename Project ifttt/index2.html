@@ -68,6 +68,16 @@
                 console.error(error);
             });
         }
+
+        function displayPoem(data){
+        
+         const drVerse = data[0].lines[randomNumber];  
+
+     const drLine = document.createElement('p');
+     drLine.innerText = drVerse;
+
+
+    }
         
 
       }
