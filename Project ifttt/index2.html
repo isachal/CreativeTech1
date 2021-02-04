@@ -34,25 +34,21 @@
       poemButton.addEventListener("click", fetchPoemline);
 
       const randomPoemlineURL = 'https://poetrydb.org/lines/Latitudeless%20Place/lines.json ' ;
-      function fetchPoemline(){
-        fetch(randomPoemlineURL). then(function (result) { 
-            console.log(result);
-            return result.json();
-
-            
-
-
-        }).
-        then((data) => {
-            console.log("JSON data from DB:");
-            console.log(data);
-            //displayPoem(data);
+    //   function fetchPoemline(){
+    //     fetch(randomPoemlineURL). then(function (result) { 
+    //         console.log(result);
+    //         return result.json();
+    //     }).
+    //     then((data) => {
+    //         console.log("JSON data from DB:");
+    //         console.log(data);
+    //         //displayPoem(data);
 
 
-        }).catch((error) => {
-            console.error(error);
+    //     }).catch((error) => {
+    //         console.error(error);
         
-        });
+    //     });
 
         function fetchPoemline() {
             fetch('https://poetrydb.org/lines/Latitudeless%20Place/lines.json').
@@ -68,24 +64,25 @@
                 let randomLine = data[0].lines[randomNumber];
                 let lineContainer = document.createElement('p');
                 lineContainer.innerText = randomLine;
-                documentSection.appendChild(lineContainer);
+                poemLine.appendChild(lineContainer);
             }).catch((error) => {
                 console.error(error);
             });
         }
 
-        function displayPoem(data){
+        //function displayPoem(data){
         
-         const drVerse = data[0].lines[randomNumber];  
+            //const drVerse = data[0].lines[randomNumber];  
 
-     const drLine = document.createElement('p');
-     drLine.innerText = drVerse;
+            //const drLine = document.createElement('p');
+            //drLine.innerText = drVerse;
 
+    
 
-    }
+        //}
         
 
-      }
+      
 
   </script>
   <footer></footer>
