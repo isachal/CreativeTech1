@@ -34,8 +34,10 @@ main {
  }
  
  h1{
-     color: ivory;
-     margin-top: 150px;
+     color: navy;
+     margin-top: 10px;
+     margin-left: 170px;
+     font-family: 'Courier New', Courier, monospace;
  }
  
  body{
