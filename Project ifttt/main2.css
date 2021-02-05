@@ -15,7 +15,7 @@ main {
 
 
  button {
-    margin-top: 80px;
+    margin-top: 20px;
     margin-left: 170px;
     background-color: black;
     color: white;
@@ -34,7 +34,7 @@ main {
  }
  
  h1{
-     color: navy;
+     color: gray;
      margin-top: 10px;
      margin-left: 170px;
      font-family: 'Courier New', Courier, monospace;
