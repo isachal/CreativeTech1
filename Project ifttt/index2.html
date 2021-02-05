@@ -4,13 +4,15 @@
     <link rel='stylesheet' href='main2.css' 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poem Lines</title>
+    <title>Whispers to Alexa</title>
 </head>
 <body>
   <header>
      <button id='fetchPoemline'> Some poetry...</button>
 
-  </header>  
+  </header> 
+  
+  <h1>Whispers to Alexa</h1>
 
   <img src="ink.png" alt="splash">
   <main>
@@ -33,7 +35,7 @@
 
       poemButton.addEventListener("click", fetchPoemline);
 
-      const randomPoemlineURL = 'https://poetrydb.org/lines/Latitudeless%20Place/lines.json ' ;
+      const randomPoemlineURL = 'https://poetrydb.org/lines/Tree/lines.json ' ;
     //   function fetchPoemline(){
     //     fetch(randomPoemlineURL). then(function (result) { 
     //         console.log(result);
@@ -51,7 +53,7 @@
     //     });
 
         function fetchPoemline() {
-            fetch('https://poetrydb.org/lines/Latitudeless%20Place/lines.json').
+            fetch('https://poetrydb.org/lines/Tree/lines.json').
             then((result) => {
                 console.log("Result from Poetry DB:")
                 console.log(result);
