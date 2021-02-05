@@ -31,11 +31,12 @@ main {
  
  p{
      font-family: 'Courier New', Courier, monospace, sans-serif;
+     
  }
  
  h1{
      color: gray;
-     margin-top: 10px;
+     margin-top: 30px;
      margin-left: 170px;
      font-family: 'Courier New', Courier, monospace;
  }
