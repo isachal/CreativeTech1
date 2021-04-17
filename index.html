@@ -5,12 +5,14 @@
     <link rel='stylesheet' href='main.css' <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>isachalCreativeTech</title>
-</head>
+  <script src="libraries/quicksettings.js"></script>
+    <script src="libraries/p5.gui.js"></script>
+  </head>
 
 <body>
     <main>
 
-    <h1>Spring Term 2021</h1>
+    <h1>MDP Creative Technology - Spring Term 2021</h1>
     <h1>Week 1 Reading</h1>
     <h2>Quotes - "Programming Design Systems" by  Rune Madsen</h2>
 
@@ -71,13 +73,13 @@
             <img src="WAlexa_finaldiagram.png" alt="final diagram">
        
        
-                <video width="640" height="560">
-                <source src="whispers to alexa.mp4" type="video/mp4">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0rklfqZl6RY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
     
                 </video>
 
         <h2>Reflection</h2>
-            <p>Overall, I really enjoyed learning about pulling information using APIs. The website I created was extremelly rudimentary but I really enjoyed gaining more experience with CSS and learning how to create functional buttons. I think that the spotify element of our project was also a very unusual part; it would be interesting to explore its capabilities further and consider combining a lyrics genius API. </p>
+            <p>Overall, I really enjoyed learning about pulling information using APIs. The website I created was extremelly rudimentary but I really enjoyed gaining more experience with CSS and learning how to create functional buttons. I think that the spotify element of our project was also a very unusual part; it would be interesting to explore its capabilities further and consider combining a lyrics genius API for example. </p>
 
 
         <h1> Week 3 Reading</h1>
@@ -113,7 +115,7 @@
             <p>Maybe everything could be part of the system when you think of our human world, I have trouble seeing things being trully independent from each other. I think there is an interesting exercise of prioritisation here, it shows the authors perspective.Making something independent feels like saying: it is connected but not relevant enough for this sceneario.</p>
 
         <h1>Week 5 Reading</h1>
-        <h2>Quotes - "Petri Dish" by Elizabeth FS Roberts (web article </h2>
+        <h2>Quotes - "Petri Dish" by Elizabeth FS Roberts (web article) </h2>
 
             <p><strong>"This use of “culture” harkens back to the cultivation of agriculture and animal husbandry of the 16th century, which was extended to the process of human development and eventually linked by philosophers, like Johann Gottfried Herder, to people marinating in particular conditions of place, language, spirit and tradition."</strong></p>
 
@@ -158,7 +160,7 @@
 
             <h2>Reflection</h2>
 
-                <p>My favourite part of the project was animating objects in unity. I think the scribbling pencil was particularly effective as there was something quite organic about its movement and I could've emphasized that by making it bigger. I will definetly be using these skill in unity later on. Photogrametry was also a discovery form me, I enjoyed the graininess and imperfections of certain models and the visual style they create.</p>
+                <p>My favourite part of the project was animating objects in unity. I think the scribbling pencil was particularly effective as there was something quite organic about its movement and I could've emphasized that by making it bigger. I will definetly be using these skill in unity later on -update: they were used in my studio 4 project-. Photogrametry was also a discovery form me, I enjoyed the graininess and imperfections of certain models and the visual style they create.</p>
 
 
             <h1> Week 6 Reading</h1>
@@ -188,29 +190,58 @@
 
             <p>I wonder how advertising companies deal with this. How long term can a campaign be followed/prolongued ethically? Obsolecense is pervasive in the 21st Century.</p>
 
-        <h1>Fall Term 2020</h1>
-        <h1>Week1</h1>
+            <h1> Making Spaces -  The Pattern Prediction Lab (Wekk9-12)</h1>
+            <h2> Concept</h2>
+            <p> Pattern Prediction Lab is a fictional laboratory that translates complex data into 2D patterns. Once patterns are established they are surveyed, if an anomally is detected in any of a patters, an allarm goes off signalling an anomally or failure of the pattern.</p>
+            <h2>Final</h2>
+           
+           <p>We presented our final videos together on Zoom as a series of cameras, like security footage.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/HGbKL0I8ZEU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Footage from my camera view of the Pattern Prediction Lab</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LxB8ZXLMyMY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h2>Reflection</h2>
+                    <p>This project allowed me to play with patterns in my personal visual style which I really enjoyed. I would love to harness this technique more in another project, hopefully in a deeper way. There wasn't a particular scheme  behind the patterns but I like that they were miscilaneous and couldn't be connected in subject  (yet they were through style). I find that the topics of data surveillance, oversimplification of data and urges for homogenisation interesting frameworks that I would potentially explore further for a future project.  </p>
+
+            <h1> Personal Project - Exploring Typography and DOMs in P5.js (Week9-13)</h1>
+
+            <p>The innitial objective of my project was to look at ways of altering typography by changing the appearance of glyphs (eg in the work of <a href="https://www.schultzschultz.com/type-design.html">Schultz & Schultz</a>). I was especially interested in using different sliders or other doms to make these transformations personalisable and create a playful experience. </p>
+
+            <p>My first experiment was to create a simple sketch in p5.js and connect sliders to type,</p>
+            
+            <iframe  style="width: 800px; height: 500px; overflow: hidden;"  scrolling="no" frameborder="0" src="https://editor.p5js.org/isachal/embed/4DruD072j"></iframe>
+
+                <p> I then started to reflect on how I could change my typography more drastically. One option was to draw and control shapes that mimiced type. I designed this font I called "triant" using 3 types of triangles that I could potentially use.</p>
+            <img src="typeface_triant-03.png" alt="type black">
+
+            <p>I later discovered opentype.js. It opened up a new world of altering actual fonts, turning them into glyphs or the original bezier curves. After playing around and inspiring myself from a sketch by Allison Parish, I created this final sketch:</p>
+
+            <iframe style="width: 1100px; height: 700px; overflow: hidden;"  scrolling="no" frameborder="0" src="https://editor.p5js.org/isachal/embed/5HYmipggS"></iframe>
+
+            <h2>Reflection</h2>
+
+            <p>My sketch ended up looking totally different to what I envisaged which is something I am starting to get used to. I was however very happy with my result as it highlighted the process of modification of the fonts by bring to light their "trails", an unexpected behind the scenes. Through this project I found a number of great refferences on code dealing with typography  or breaking down motion and transformation with code which was a great discovery for me (the "Type + Code" book, The Coding Train  youtube channel, Allison Parrish and Tim Rodenbröker's websites). I am also glad that I made mistakes, explored different possibilities and developped new ideas by being open to experimenting. I can see myself making Triant into a font for example and through my research, I found out that the platform that allows me to do this used code on Opentype.js so it feels great to understand who/what is going on behind the scenes. At the end of this year I feel tremendously more comfortable using code  and finally feel I have passed a threshold in my understanding of it's structure and the approach  I should tate to basic troubleshooting. </p>
+
+            <p> - Thank you to Ben and Maxim for encouraging me on this Creative Tech Journey -</p>
+
+
+
+        <h1>MDP Creative Technology - Fall Term 2020</h1>
+        <h1>Week 1</h1>
         <h2>Creative tech tools</h2>
-        <p>3Doodler Create+ Essentials 3D Printing Pen Set
-            https://the3doodler.com/collections/create/products/create-essentials </p>
 
-        <p> 3D Body Scaner
-            https://www.styku.com</p>
+        <p><a href="https://the3doodler.com/collections/create/products/create-essentials"></a>3Doodler Create + Essentials 3D Printing Pen Set</a></p>
 
-        <p> Poem generator
-            https://www.poem-generator.org.uk/</p>
+        <p><a href=" https://www.styku.com">3D Body Scaner</a></p>
 
 
 
         <h2>Project examples</h2>
-        <p>Yuri Suzuki https://yurisuzuki.com/artist/looks-like-music/</p>
+        <p><a href="https://yurisuzuki.com/artist/looks-like-music/">Yuri Suzuki</a> - Hardware </p>
 
-        <p>Georgia Lupi http://giorgialupi.com/whatcounts</p>
+        <p><a href="http://giorgialupi.com/whatcounts">Georgia Lupi </a> - Data Visualisation</p>
 
+        <p><a href="https://www.rollingstone.com/music/music-news/watch-daft-punks-legendary-2006-coachella-set-in-documentary-clip-225749/">Daft Punk</a> - Performance </p>
 
-        <p> Daft Punk
-            //www.rollingstone.com/music/music-news/watch-daft-punks-legendary-2006-coachella-set-in-documentary-clip-225749/
-        </p>
 
 
 
@@ -512,7 +543,8 @@
 
 
 
-    <footer> more @ isabellechaligne.com</footer>
+    <footer> <a href="https://www.isabellechaligne.com/mdp">more @ isabellechaligne.com</a>
+        </footer> 
 </body>
 
 </html>
